@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from  'react';
-import './App.css';
+import { Switch, Route, Link } from 'react-router-dom'
 import axios from 'axios'
+import './App.css';
+
 
 function App() {
   const [text, setText] = useState('');
@@ -8,7 +10,6 @@ function App() {
 
    //第二引数の[query]が変更したら実行される
   useEffect(() => {
-    console.log('userEffectが走りました。')
     axios.post(`http://localhost:3000/todos`, {task: query});
   }, [query])
 
@@ -17,24 +18,23 @@ function App() {
     e.preventDefault(); //画面遷移を防ぐ
     setQuery(text);
     setText('');
-    console.log("onSubmitが呼ばれました。");
   }
   
   return(
-    <div className="App">
-      <div className="main">
-        <form onSubmit={onSubmit}>
-          <input 
-            type="text"
-            onChange={e => setText(e.target.value)}
-            value = {text}
-            />
-            <button type="submit">Search</button>
-        </form>
+      <div className="App">
+        <div className="main">
+          <form onSubmit={onSubmit}>
+            <input 
+              type="text"
+              onChange={e => setText(e.target.value)}
+              value = {text}
+              />
+              <button type="submit">Search</button>
+          </form>
+        </div>
+        <div className="container">
+        </div>
       </div>
-      <div className="container">
-      </div>
-    </div>
   )
 }
 

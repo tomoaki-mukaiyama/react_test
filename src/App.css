@@ -4,11 +4,23 @@
   text-align: center;
 }
 
+ul {
+  list-style: none;
+}
+
+ul.task-content {
+  padding-left: 0px;
+}
+
+a {
+  text-decoration:none; 
+  color: black;
+}
+
 input {
   border: 3px solod #32e17c;
-  height: 40px;
-  width: 250px;
-  border-radius: 30px;
+  height: 100px;
+  width: 500px;
   padding: 0 10px;
   font-size: 18px;
 }
@@ -19,17 +31,30 @@ input:focus {
 
 button {
   margin-left: 10px;
-  width: 80px;
-  height: 40px;
-  background-color: #32e17c;
+  width: 110px;
+  height: 35px;
+  background-color: white;
   border-style: none;
-  color: white;
+  border: solid 1px black;
+
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3%;
+}
+
+.task-container{
+  display:table;  width:100%;
+}
+
+.content-task {
+  display:table-cell; text-align:left;
+}
+
+.content-created-at {
+  display:table-cell;
 }
 
 .card {

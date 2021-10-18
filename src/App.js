@@ -1,40 +1,63 @@
-import React, { useState, useEffect } from  'react';
 import { Switch, Route, Link } from 'react-router-dom'
-import axios from 'axios'
+import styled from 'styled-components'
+import TodoList from './TodoList'
+import AddTodo from './AddTodo'
+import TodoShow from './TodoShow'
 import './App.css';
+
+const Nabvar = styled.nav`
+  border-bottom: solid 1px;
+  min-height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+
+
+const NavItems = styled.ul`
+  display: flex;
+  width: 400px;
+  max-width: 40%;
+  justify-content: space-around;
+  list-style: none;
+`
+
+const NavItem = styled.li`
+  font-size: 19px;
+`
+
+const Wrapper = styled.div`
+  width: 1000px;
+  max-width: 85%;
+  margin: 20px auto;
+`
 
 
 function App() {
-  const [text, setText] = useState('');
-  const [query, setQuery] = useState('');
-
-   //第二引数の[query]が変更したら実行される
-  useEffect(() => {
-    axios.post(`http://localhost:3000/todos`, {task: query});
-  }, [query])
-
-  //ボタンのsubmitで実行される setQueryが実行されて、useEffectが発火
-  const onSubmit = (e) => {
-    e.preventDefault(); //画面遷移を防ぐ
-    setQuery(text);
-    setText('');
-  }
-  
   return(
-      <div className="App">
-        <div className="main">
-          <form onSubmit={onSubmit}>
-            <input 
-              type="text"
-              onChange={e => setText(e.target.value)}
-              value = {text}
-              />
-              <button type="submit">Search</button>
-          </form>
-        </div>
-        <div className="container">
-        </div>
-      </div>
+    <>
+      <Nabvar>
+        <NavItems>
+          <NavItem>
+            <Link to="/">
+              POST NEW
+            </Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/todos/list">
+              LIST
+            </Link>
+          </NavItem>
+        </NavItems>
+      </Nabvar>
+      <Wrapper>
+        <Switch>
+          <Route exact path="/" component={AddTodo} />
+          <Route exact path="/todos/list" component={TodoList} />
+          <Route exact path="/todo/:id" component={TodoShow} />
+        </Switch>
+      </Wrapper>
+    </>
   )
 }
 

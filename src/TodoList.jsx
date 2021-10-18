@@ -22,11 +22,7 @@ function TodoList() {
       <div className="task-container">
         <ul className="content-created-at">
           {todos.map((todo) => {
-            return (
-              <Link to={"/todo/" + todo.id}>
-                <li>{todo.created_at}</li>
-              </Link>
-            );
+            return <li>{todo.created_at}</li>;
           })}
         </ul>
         <ul className="content-task">

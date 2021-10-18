@@ -13,20 +13,8 @@ ul.task-content {
 }
 
 a {
-  text-decoration:none; 
+  text-decoration: none;
   color: black;
-}
-
-input {
-  border: 3px solod #32e17c;
-  height: 100px;
-  width: 500px;
-  padding: 0 10px;
-  font-size: 18px;
-}
-
-input:focus {
-  outline: none;
 }
 
 button {
@@ -36,7 +24,6 @@ button {
   background-color: white;
   border-style: none;
   border: solid 1px black;
-
 }
 
 .container {
@@ -45,16 +32,33 @@ button {
   gap: 3%;
 }
 
-.task-container{
-  display:table;  width:100%;
-}
-
-.content-task {
-  display:table-cell; text-align:left;
+.task-container {
+  display: table;
+  width: 100%;
 }
 
 .content-created-at {
-  display:table-cell;
+  display: table-cell;
+  width: 23%;
+}
+
+.content-created-at > li {
+  padding: 3px 10px;
+}
+
+.content-task {
+  display: table-cell;
+  text-align: left;
+  padding: 0;
+}
+
+.content-task > a > li {
+  padding: 3px 10px;
+}
+
+.content-task > a > li:hover {
+  padding: 2px 9px;
+  border: solid 1px black;
 }
 
 .card {

@@ -37,7 +37,7 @@ function App() {
       <Nabvar>
         <NavItems>
           <NavItem>
-            <Link to="/">POST NEW</Link>
+            <Link to="/">NEW</Link>
           </NavItem>
           <NavItem>
             <Link to="/todos/list">LIST</Link>

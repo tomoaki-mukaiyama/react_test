@@ -3,7 +3,11 @@ import styled from "styled-components";
 import axios from "axios";
 
 const Button = styled.button`
-  display: none;
+  width: 200px;
+  height: 35px;
+  background-color: white;
+  border-style: none;
+  border: solid 1px black;
 `;
 const Form = styled.input`
   height: 40px;
@@ -66,7 +70,7 @@ function AddTodo(props) {
                   placeholder="description"
                 />
               </li>
-              <Button type="submit"></Button>
+              <Button type="submit">POST</Button>
             </ul>
           </form>
         </div>

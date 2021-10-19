@@ -37,15 +37,6 @@ button {
   width: 100%;
 }
 
-.content-created-at {
-  display: table-cell;
-  width: 23%;
-}
-
-.content-created-at > li {
-  padding: 3px 10px;
-}
-
 .content-task {
   display: table-cell;
   text-align: left;
@@ -53,7 +44,12 @@ button {
 }
 
 .content-task > a > li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   padding: 3px 10px;
+  height: 30px;
+  width: 70%;
 }
 
 .content-task > a > li:hover {
@@ -61,6 +57,16 @@ button {
   border: solid 1px black;
 }
 
+.todo-title {
+  padding: 40px;
+  margin: 66px 0px;
+  border: solid 1px;
+}
+
+.todo-description {
+  white-space: pre-line;
+  margin: 100px 0px;
+}
 .card {
   background: #fff;
   border-radius: 5px;

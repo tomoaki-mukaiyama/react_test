@@ -28,7 +28,7 @@ const NavItem = styled.li`
 const Wrapper = styled.div`
   width: 1000px;
   max-width: 85%;
-  margin: 20px auto;
+  margin: 50px auto;
 `;
 
 function App() {

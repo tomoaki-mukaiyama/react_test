@@ -3,15 +3,13 @@ import styled from "styled-components";
 import axios from "axios";
 
 const Button = styled.button`
-  width: 200px;
-  height: 35px;
   background-color: white;
   border-style: none;
-  border: solid 1px black;
+  padding: 0px;
 `;
 const Form = styled.input`
   height: 40px;
-  width: 100%;
+  width: 95%;
   padding: 0 10px;
   font-size: 18px;
   margin: 10px;
@@ -19,7 +17,7 @@ const Form = styled.input`
 
 const TextArea = styled.textarea`
   height: 400px;
-  width: 100%;
+  width: 95%;
   padding: 0 10px;
   font-size: 18px;
   margin: 10px;
@@ -70,7 +68,7 @@ function AddTodo(props) {
                   placeholder="description"
                 />
               </li>
-              <Button type="submit">POST</Button>
+              <Button type="submit"></Button>
             </ul>
           </form>
         </div>

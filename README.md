@@ -1,5 +1,5 @@
-application.html.erb
-<%= javascript_pack_tag 'index' %> によって
-app/javascript/packs/index.jsx が読み込まれる
-
-#rootのdivを取得して、その中にAppコンポーネント(App.js)を描画
+・フォームで url を post する
+・railsAPI が url を受け取る
+・selenium がデータを取得
+・データを DB に保存
+・取得したデータとともに line 通知

@@ -40,14 +40,14 @@ function App() {
             <Link to="/">NEW</Link>
           </NavItem>
           <NavItem>
-            <Link to="/todos/list">LIST</Link>
+            <Link to="/todos">LIST</Link>
           </NavItem>
         </NavItems>
       </Nabvar>
       <Wrapper>
         <Switch>
           <Route exact path="/" component={AddTodo} />
-          <Route exact path="/todos/list" component={TodoList} />
+          <Route exact path="/todos" component={TodoList} />
           <Route exact path="/todo/:id" component={TodoShow} />
         </Switch>
       </Wrapper>

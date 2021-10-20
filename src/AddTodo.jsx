@@ -26,27 +26,49 @@ const TextArea = styled.textarea`
 function AddTodo(props) {
   const [task, setTask] = useState("");
   const [description, setDescription] = useState("");
-  const [query, setQuery] = useState("");
+  // const [query, setQuery] = useState("");
 
   //第二引数の[query]が変更したら実行される
-  useEffect(() => {
+  const postTodo = (query) => {
     axios
       .post(`http://localhost:3000/todos`, {
+        // task: "query[0]",
         task: query[0],
         description: query[1],
       })
       .catch((e) => {
         console.log(e);
       });
-  }, [query]);
+  };
 
   //ボタンのsubmitで実行される setQueryが実行されて、useEffectが発火
   const onSubmit = (e) => {
     e.preventDefault(); //画面遷移を防ぐ
-    setQuery([task, description]);
+    postTodo([task, description]);
     setTask("");
     setDescription("");
   };
+
+  // //第二引数の[query]が変更したら実行される
+  // useEffect(() => {
+  //   axios
+  //     .post(`http://localhost:3000/todos`, {
+  //       // task: "query[0]",
+  //       task: query[0],
+  //       description: query[1],
+  //     })
+  //     .catch((e) => {
+  //       console.log(e);
+  //     });
+  // }, [query]);
+
+  // //ボタンのsubmitで実行される setQueryが実行されて、useEffectが発火
+  // const onSubmit = (e) => {
+  //   e.preventDefault(); //画面遷移を防ぐ
+  //   setQuery([task, description]);
+  //   setTask("");
+  //   setDescription("");
+  // };
 
   return (
     <>

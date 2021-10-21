@@ -16,7 +16,7 @@ function TodoShow(props) {
   };
 
   const destroy = (id) => {
-    const sure = window.confirm("Are you sure to delete?");
+    const sure = window.confirm("Are you sure to delete this article?");
     if (sure) {
       axios
         .delete(`http://localhost:3000/todos/${id}`)

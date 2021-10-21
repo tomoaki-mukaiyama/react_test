@@ -11,6 +11,9 @@ const Nabvar = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: white;
 `;
 
 const NavItems = styled.ul`
@@ -28,7 +31,9 @@ const NavItem = styled.li`
 const Wrapper = styled.div`
   width: 1000px;
   max-width: 85%;
-  margin: 50px auto;
+  margin: auto;
+  margin-bottom: 100px;
+  padding-top: 150px;
 `;
 
 function App() {

@@ -20,36 +20,36 @@ a {
   text-decoration: none;
   color: black;
 }
-
+/* 
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3%;
-}
+} */
 
-.task-container {
-  display: table;
-  width: 100%;
-}
+/* .task-container {
+} */
 
 .content-task {
   display: table-cell;
   text-align: left;
   padding: 0;
+  font-size: 20px;
+  width: 50%;
 }
 
 .content-task > a > li {
-  margin-right: 350px;
+  margin-right: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 3px 10px;
+  padding: 5px 10px;
   height: 30px;
-  width: 70%;
+  width: 85%;
 }
 
 .content-task > a > li:hover {
-  padding: 2px 9px;
+  padding: 4px 9px;
   border: solid 1px black;
 }
 
@@ -57,11 +57,13 @@ a {
   padding: 40px;
   margin: 66px 0px;
   border: solid 1px;
+  font-size: 35px;
 }
 
 .todo-description {
   white-space: pre-line;
   margin: 100px 0px;
+  font-size: 25px;
 }
 .card {
   background: #fff;
